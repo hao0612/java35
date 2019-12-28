@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	function change(){
+		var $visible = $("div:visible");
+		var $hidden = $("div:hidden");
+		$visible.fadeOut(0);
+		$hidden.fadeIn(0);
+	}
+	function save(val){
+		$("span").get(0).innerHTML = val;
+		change();
+	}
+	
+	</script>
+</head>
+<body>
+	<div>
+		<span title="修改" class="nickname" ondblclick="change()">内容</span>
+	</div>
+	<div style="display:none">
+		<input class="nickname" value="内容" onblur="save(this.value)">
+	
+	</div>
+</body>
+</html>

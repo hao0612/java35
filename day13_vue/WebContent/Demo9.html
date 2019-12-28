@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>class属性绑定</title>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+<div id="main">
+	<button @click="x1">左</button>
+	<button @click="x2">中</button>
+	<button @click="x3">右</button>
+<div v-bind:class='[q,w]'>
+		示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  <br>
+		示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  <br>
+		示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  <br>
+		示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  <br>
+		示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  <br>
+	</div>
+</div>
+<script type="text/javascript">
+	var v = new Vue({
+		el:"#main",
+		data:{
+			q:"text-left",
+			w:"bg-success"
+		},
+		methods:{
+			x1:function(){
+				this.q="text-left";
+			},
+			x2:function(){
+				this.q="text-center"
+			},
+			x3:function(){
+				this.q="text-right";
+			
+			}
+		}
+		
+	});
+</script>
+</body>
+</html>

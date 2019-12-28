@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#content{
+	position:fixed;
+	left:0px;
+	top:0px;
+	bottom:0px;
+	width:80px;
+}
+#content>video{
+	height:100%;
+}
+#menu{
+	position:fixed;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	width:20%;
+	background-color:#eee;
+	overflow:auto;
+}
+#menu>ul{
+	padding-left:0px;
+	list-style-type:none
+}
+#menu li{
+	padding:10px 0px;
+	text-align:center;
+}
+#menu li:hover{
+	background-color:#993;
+	color:#fff;
+	cursor:pointer;
+}
+#active{
+	background-color:#993;
+	color:#fff;
+}
+</style>
+</head>
+<body>
+	<div id="content">
+		<video src="mp4/刻意练习.mp4" controls autoplay></video>
+	</div>
+	<div id="menu">
+		<ul>
+			<li onclick="x1(0)" class="active">刻意练习</li>
+			<li onclick="x1(1)">亲密关系</li>
+			<li onclick="x1(2)">非暴力沟通</li>
+			<li onclick="x1(3)">哈哈</li>
+		</ul>
+	</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	var arr=["mp4/刻意练习.mp4","mp4/亲密关系.mp4","mp4/非暴力沟通.mp4","mp4/哈哈.mp4"];
+	function x1(index){
+		$("video").attr("src",arr[index]);
+		$("li").removeClass("active");
+		$("li:eq("+index+")").addClass("active");
+	}
+	
+</script>
+</body>
+</html>

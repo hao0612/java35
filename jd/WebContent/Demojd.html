@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.page{
+	width:590px;
+	height:470px;
+	position:relative;
+}
+.page_1{
+	width:590px;
+	height:470px;
+}
+.page_1>img{
+	width:590px;
+	height:470px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	botton:0px;
+}
+.page_2{
+	position:absolute;
+	top:217px;
+	height:36px;
+	left:0px;
+	right:0px;
+}
+.page_2>.div{
+	width:26px;
+	height:36px;
+	background-color:rgba(66,66,66,0.2);
+	link-height:36px;
+	color:#eee;
+	font-family:"楷体";
+	text-family:center;
+	font-size:14px;
+	font-weight:bold;
+	cursor:pointer;
+}
+.page_2>div:hover{
+	background-color:rgba(66,66,66,0.4);
+	color:#fff;
+}
+.page_2_left{
+	float:left;
+	border-top-right-radius:26px;
+	border-bottom-right-radius:26px;
+}
+.page_2_right{
+	float:right;
+	border-top-left-radius:26px;
+	border-bottom-left-radius:26px;
+}
+.page_3{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	height:50px;
+	padding-left:30px;
+}
+.page_3>div{
+	display:inline-block;
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	background-color:rgba(222,222,222,0.4);
+	margin-left:1px;
+}
+div.active{
+	background-color:#fff;
+	box-shadow:0px 0px 0px 3px rgba(222,222,222,0.4);
+}
+</style>
+</head>
+<body>
+<div class="page" onmouseover="clearInterval(ivid)" onmouseout="startHeiheihei()">
+<div class="page_1">
+	<img src="tp/1.jpg">
+	<img src="tp/2.jpg" style="display:none">
+	<img src="tp/3.jpg" style="display:none">
+	<img src="tp/4.jpg" style="display:none">
+	<img src="tp/5.jpg" style="display:none">
+	<img src="tp/6.jpg" style="display:none">
+	<img src="tp/7.jpg" style="display:none">
+	<img src="tp/8.jpg" style="display:none">
+</div>
+<div class="page_2">
+	<div class="page_2_left" onclick="x1(-1)"><</div>
+	<div class="page_2_right" onclick="x1(1)">></div>
+</div>
+<div class="page_3"	>
+	<div onmouseover="index=0;show();" class="active"></div>
+	<div onmouseover="index=1;show();"></div>
+	<div onmouseover="index=2;show();"></div>
+	<div onmouseover="index=3;show();"></div>
+	<div onmouseover="index=4;show();"></div>
+	<div onmouseover="index=5;show();"></div>
+	<div onmouseover="index=6;show();"></div>
+	<div onmouseover="index=7;show();"></div>
+</div>
+</div>	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		 var index = 0;
+		function x1(num){
+			index+=num;
+			if(index == -1){
+				index = 7;
+			}else if(index == 8){
+				index = 0;
+			}
+			show();
+		}
+		function show(){
+			$(".page_1>img").fadeOut(300);
+			$(".page_1>img:eq("+index+")").fadeIn(300);
+			$(".page_3>div").removeClass("active");
+			$(".page_3>div:eq("+index+")").addClass("active");
+		}
+		$(function(){
+			startHeiheihei();
+		});
+		var ivid = null;
+		function startHeiheihei(){
+			ivid = setInterval(function(){
+				x1(1);
+			},500);
+		}
+	</script>
+	
+	
+</body>
+</html>

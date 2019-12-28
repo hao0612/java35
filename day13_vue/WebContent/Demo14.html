@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>v-show</title>
+<script type="text/javascript" src="js/vue.min.js"></script>
+</head>
+<body>
+	<div id="main">
+		<button @click="x1">显示</button>
+		<button @click="x2">隐藏</button>
+		<br>
+		<img src="images/8.jpg" v-show="flag">
+	</div>
+	<script type="text/javascript">
+		var v = new Vue({
+			el:"#main",
+			methods:{
+				x1:function(){
+					this.flag= true;
+				},
+				x2:function(){
+					this.flag = false;
+				}
+			},
+			data:{
+				flag:true
+			}
+			
+		});
+	</script>
+</body>
+</html>

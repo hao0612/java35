@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+	<div>
+	<h3>基本隐藏</h3>
+	<button onclick="$('img').show();">显示</button>
+	<button onclick="$('img').hide();">隐藏</button>
+	<button onclick="$('img').toggle();">切换</button>
+	<h3>上下折叠淡入淡出</h3>
+	<button onclick="$('img').show(2000);">显示</button>
+	<button onclick="$('img').hide(2000);">隐藏</button>
+	<button onclick="$('img').toggle(2000);">切换</button>
+	<h3>上下折叠</h3>
+	<button onclick="$('img').slideDown(2000);">显示</button>
+	<button onclick="$('img').slideUp(2000);">隐藏</button>
+	<button onclick="$('img').slideToggle(2000);">切换</button>
+	</div>
+	<div style ="position:absolute;right:0px;top:0px;width:800px">
+		<img src ="images/11.jpg" style="width:500px;">
+	</div>
+</body>
+</html>

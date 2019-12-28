@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img{
+		width:300px;
+	}
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	var arr = ["images/11.jpg","images/12.jpg","images/6.jpg","images/8.jpg","images/9.jpg","images/10.jpg"];
+	var index = 0;
+	$(function(){
+		setInterval(function(){
+			index++;
+			if(index == arr.length){
+				index=0;
+			}
+			var imgPath = arr[index];
+			$("img").attr({
+				"src":imgPath,
+				"title":"第"+(index+1)+"图片"
+			});
+		},50);
+	});
+
+
+</script>
+</head>
+<body>
+	<img src="images/11.jpg">
+	<img src="images/12.jpg">
+	<img src="images/6.jpg">
+	<img src="images/8.jpg">
+	<img src="images/9.jpg">
+	<img src="images/10.jpg">
+	
+</body>
+</html>

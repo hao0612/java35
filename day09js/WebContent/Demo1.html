@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<img src="images/11.jpg">
+	<p>
+		<button onclick="x1(1)">换图1</button>
+		<button onclick="x1(2)">换图2</button>
+	</p>
+	<script type="text/javascript">
+		function x1(num){
+			var imgs = document.getElementsByTagName("img");
+			if(num==1){
+				imgs[0].src="images/11.jpg"
+				
+			}else{
+				imgs[0].src="images/12.jpg"
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>data属性与插值表达式案例</title>
+<script type="text/javascript" src="js/vue.min.js"></script>
+</head>
+<body>
+	<div id="main">
+	<div>
+		<div>商品名称:{{content[0].name}}</div>
+		<div>商品价格:{{content[0].price}}</div>
+	</div><hr>
+	
+	<div>
+		<div>商品名称:{{content[1].name}}</div>
+		<div>商品价格:{{content[1].price}}</div>
+	</div><hr>
+	<div>
+		<div>商品名称:{{content[2].name}}</div>
+		<div>商品价格:{{content[2].price}}</div>
+	</div><hr>
+	<div>
+		<div>商品名称:{{content[3].name}}</div>
+		<div>商品价格:{{content[3].price}}</div>
+	</div><hr>
+	<div>
+		<div>商品名称:{{content[4].name}}</div>
+		<div>商品价格:{{content[4].price}}</div>
+	</div>
+	<button onclick="x1()">下一页</button>
+	</div>
+	<script type="text/javascript">
+		function x1(){
+			v.content = arr2;
+		}
+		var arr1 = [{
+			"name":"惠普HP星14英寸轻薄笔记本电脑",
+			"price":"￥5499.00"
+		},{
+			"name":"RedmiBook 14 增强版 全金属超轻薄",
+			"price":"￥4199.00"
+		},{
+			"name":"联想(Lenovo)小新Air14英寸 ",
+			"price":"￥3999.00"
+		},{
+			"name":"荣耀MagicBook 2019 第三方Linux版",
+			"price":"￥3999.00"
+		},{
+			"name":"机械革命(MECHREVO)S1 Pro ",
+			"price":"￥3999.00"
+		}];
+		var arr2 = [{
+			"name":"惠普(HP)暗影精灵5 plus 17.3",
+			"price":"￥19999.00"
+		},{
+			"name":"【限时抢600券】华硕(ASUS)Mars15 15.6",
+			"price":"￥7199.00"
+		},{
+			"name":"微星(msi)P65新世代 15.6英寸轻薄创意设计笔记本电脑",
+			"price":"￥21989.00"
+		},{
+			"name":"华硕(ASUS) 灵耀X2 Pro",
+			"price":"￥29989.00"
+		},{
+			"name":"惠普（HP）战99-W20 15.6英寸 工作站 ",
+			"price":"￥14999.00"
+		}];
+	var v= new Vue({
+		el:"#main",
+		data:{
+			content:arr1
+		}
+		
+	});
+
+	</script>
+</body>
+</html>

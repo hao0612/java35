@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		var  flag = false;
+		function x1(){
+			var val = $("input").val();
+			var num = parseInt(val);
+			num++;
+			$("input").val(num);
+			if(num > 1 && flag == false){
+				//
+				$("button:eq(1)").bind("click",x2);
+				flag = true;
+			}
+		}
+		function x2(){
+			var val = $("input").val();
+			var num = parseInt(val);
+			num --;
+			$("input").val(num);
+			if(num == 1){
+				//
+				$("button:eq(1)").unbind("click");
+				flag = false;
+			}
+		}
+		$(function(){
+			//
+			$("button:eq(0)").bind("click",x1);
+			});
+	</script>
+</head>
+<body>
+	<button>+</button>
+	<input value="1">
+	<button>-</button>
+</body>
+</html>

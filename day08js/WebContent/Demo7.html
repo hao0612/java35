@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var p = /^1(3[0-9]|47|5[012356789]|6[67]|7[0-9]|8[0-9]|9[16789])[0-9]{8}$/g;
+		var phone = prompt("恭喜你 获奖了,请输入手机号领取");
+		if(phone==null){
+				alert("真好 你不要奖品了");
+		}else{
+			if(p.test(phone)){
+				alert("手机号正确,奖品发放中,请等待");
+			}else{
+				alert("手机号错误,你与奖品擦肩而过");
+			}
+			
+		}
+	
+	</script>
+</body>
+</html>

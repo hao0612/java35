@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img{
+		width:400px;
+	}
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("img[title]").css("border","1px solid red");
+		$("img[title='美女图片1']").fadeOut(10000);
+		$("img[title!='美女图片1']").fadeOut(20000);
+		
+		
+	})
+</script>
+</head>
+<body>
+	<img src="images/10.jpg" title="美女图片1">
+	<img src="images/6.jpg" title="美女图片2">
+	<img src="images/8.jpg" title="美女图片3">
+</body>
+</html>

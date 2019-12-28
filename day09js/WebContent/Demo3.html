@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body {
+	margin: 0;
+}
+
+.style1 {
+	background-color: #ff0;
+	 color:#123;
+}
+
+.style2 {
+	background-color: #f00;
+	 color:#134;
+}
+
+.content {
+	padding: 50px;
+}
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+		function x1(num) {
+			var content = document.getElementsByClassName("content")[0];
+			if(num == 1) {
+				content.className = "content style1";
+			} else {				
+				content.className = "content style2";
+			}
+		}
+	</script>
+	<div class="content style1">
+		<div>
+			请选择性别: 
+			男:<input type="radio" name="sex" checked="checked" onclick="x1(1)">
+			女:<input type="radio" name="sex" onclick="x1(2)">
+		</div>
+		<h1>hhaha</h1>
+		jsjjsjjsjjjjnsdjnkvhgvbd
+	</div>
+</body>
+</html>

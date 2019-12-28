@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>全局组件</title>
+<script type="text/javascript" src="js/vue.min.js"></script>
+</head>
+<body>
+<div id="main">
+	<haha></haha>
+	<haha></haha>
+</div>
+<script type="text/javascript">
+	Vue.component("haha",{template:"<div><h3>美女大图</h3><div><img style='width:600px' src='images/9.jpg'></div></div>"})
+	var v = new Vue({
+		el:"#main"
+	});
+</script>
+</body>
+</html>

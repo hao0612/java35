@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+window.onload = function(){
+
+	var oImg = document.getElementById('img');
+
+	var arr = ['tp/1.jpg','tp/2.jpg','tp/3.jpg','tp/4.jpg','tp/5.jpg',"tp/6.jpg","tp/7.jpg","tp/8.jpg"];
+	
+	var num = 0;
+
+	
+
+	oImg.onclick = function(){
+
+		num ++;	
+
+		if(num == arr.length){
+
+			num = 0;	
+
+		}
+
+		oImg.src = arr[num];
+
+	};	
+
+};
+
+</script>
+</head>
+<body>
+<img id="img" src="tp/1.jpg"  height:590px;>
+</body>
+</html>

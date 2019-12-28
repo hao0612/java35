@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>最后<span id="s">10</span>s,关闭</h1>
+	<script type="text/javascript">
+	var num = 10;
+	setInterval(function(){
+		num--;
+		if(num == -1){
+			window.close();
+		}
+		var s = document.getElementById("s");
+		s.innerHTML = num;
+	},1000);
+	</script>
+</body>
+</html>

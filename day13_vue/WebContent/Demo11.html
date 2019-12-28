@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>计算属性</title>
+<script type="text/javascript" src="js/vue.min.js"></script>
+</head>
+<body>
+	<div id="main">
+	
+		<input placeholder="请输入用户名" v-model="val"><span v-html="pl"></span>
+	</div>
+	<script type="text/javascript">
+		var v = new Vue({
+			el:"#main",
+			data:{
+				val:""
+			},
+			computed:{
+				pl:function(){
+					var x1 = null;
+					if(this.val.length>8){
+						x1 = "<span style='color:#3a3;font-size:14px'>恭喜你用户名可用</span>";
+					}else{
+						x1 = "<span style='color:#a33;font-size:14px'>用户名不可用</span>";
+					}
+					return x1;
+				}
+			}
+		})
+	
+	</script>
+</body>
+</html>

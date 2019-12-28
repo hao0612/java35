@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<input placeholder="请输入">
+<button onclick="x1()">确认</button>
+<script type="text/javascript">
+	var myDate = new Date();
+	var Y = myDate.getFullYear();    //获取完整的年份(4位,1970-????)
+	var M = myDate.getMonth()+1;       //获取当前月份(0-11,0代表1月)
+	var D = myDate.getDate();        //获取当前日(1-31)
+	var h = myDate.getHours();       //获取当前小时数(0-23)
+	var m = myDate.getMinutes();     //获取当前分钟数(0-59)
+	var s = myDate.getSeconds();     //获取当前秒数(0-59)
+	alert(Y+"-"+M+"-"+D+"   "+h+":"+m+":"+s);
+	function x1(){
+		var a = document.getElementsByTagName("input")[0].value;
+		switch(a){
+		case 'YY' : alert(Y);break;
+		case 'MM' : alert(Y+"-"+M);break;
+		case 'DD' : alert(Y+"-"+M+"-"+D);break;
+		case 'hh' : alert(Y+"-"+M+"-"+D+"   "+h);break;
+		case 'mm' : alert(Y+"-"+M+"-"+D+"   "+h+":"+m);break;
+		case 'ss' : alert(Y+"-"+M+"-"+D+"   "+h+":"+m+":"+s);break;
+		case 'YYYY' : alert(Y);break;
+		case 'YYYY-MM' : alert(Y+"-"+M);break;
+		case 'YYYY-MM-DD' : alert(Y+"-"+M+"-"+D);break;
+		case 'YYYY-MM-DD  hh' : alert(Y+"-"+M+"-"+D+"   "+h);break;
+		case 'YYYY-MM-DD  hh:mm' : alert(Y+"-"+M+"-"+D+"   "+h+":"+m);break;
+		case 'YYYY-MM-DD  hh:mm:ss' : alert(Y+"-"+M+"-"+D+"   "+h+":"+m+":"+s);break;
+		
+		
+		}
+		
+	}
+	
+	
+</script>
+</body>
+</html>

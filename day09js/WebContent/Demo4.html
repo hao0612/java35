@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.success{
+	font-size:14px;
+	color:#f00;
+}
+.error{
+	font-size:14px;
+	color:#a33;
+}
+</style>
+</head>
+<body>
+	<input id="input1" placeholder="请输入手机号" oninput="x1(this)">&nbsp;&nbsp;<span id="pl"></span>
+	<script type="text/javascript">
+		function x1(input){
+			var p = /^1(3[0-9]|47|5[012356789]|6[67]|7[0-9]|8[0-9]|9[16789])[0-9]{8}$/g;
+			var span = document.getElementById("pl");
+			if(p.test(input.value)){
+				
+				span.className ="success";
+				span.innerHTML = "手机号正确";
+			}else{
+				span.className = "error";
+				span.innerHTML = "手机号错误";
+			}
+		}
+	</script>
+</body>
+</html>

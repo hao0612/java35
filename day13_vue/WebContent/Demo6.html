@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>事件指令</title>
+<script type="text/javascript" src="js/vue.min.js"></script>
+</head>
+<body>
+<div id="main">
+	<h3>{{text}}</h3>
+	<button @click="x1">按钮</button>
+</div>
+<script type="text/javascript">
+	var v = new Vue({
+		el:"#main",
+
+		methods:{
+			x1:function(){
+				this.text =" 想去去去去";
+			}
+		},
+		data:{
+			text:"水水水水"
+		}
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/haha.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+	<div id="main" style="padding:60px;">
+		<button @click="x1">上一页</button>[{{i+1}}]<button @click="x2">下一页</button><hr>
+		<table class="table table-striped table-bordered table-hover">
+			<tr><th>序号</th><th>笑话内容</th>
+			<tr v-for="(item,index) of arr">
+				<td>{{index+1}}</td>
+				<td>{{item.content}}</td>
+			</tr>
+		</table>
+	</div>
+	<script type="text/javascript">
+		var v = new Vue({
+			el:"#main",
+			data:{
+				i:0
+			},
+			computed:{
+				arr:function(){
+					//i=0:  0-10
+					//i=1:	10-20
+					//i=2:	20-30
+					//i=45  460-462
+					return haha.slice(this.i*10,this.i*10+10);
+				}
+			},
+			methods:{
+				x1:function(){
+					this.i--;
+					if(this.i<0){
+						this.i=46;
+					}
+				},
+				x2:function(){
+					this.i++;
+					if(this.i>46){
+						this.i=0;
+					}
+					
+				}
+			}
+			
+		});
+	</script>
+</body>
+</html>

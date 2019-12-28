@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>data属性与插值表达式</title>
+<script type="text/javascript" src="js/vue.min.js"></script>
+</head>
+<body>
+	<div id="main">
+		<h1>内容:{{text}}</h1>
+	</div>
+	<script type="text/javascript">
+		new Vue({
+			el:"#main",
+			data:{
+				text:"一二三四五"
+			}
+		});
+	</script>
+</body>
+</html>

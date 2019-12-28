@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>属性绑定</title>
+<script type="text/javascript" src="js/vue.min.js"></script>
+</head>
+<body>
+<div id="main">
+	<img :src="imgs[index]" style="width:50%">
+	<hr>
+	<button @click="x1">上</button>[{{index+1}}]<button @click="x2">下</button>
+</div>
+<script type="text/javascript">
+	var v = new Vue({
+		el:"#main",
+		data:{
+			imgs:["images/6.jpg","images/8.jpg","images/9.jpg","images/10.jpg"],
+			index:0
+		},
+		methods:{
+			x1:function(){
+				this.index--;
+				if(this.index <0){
+					this.index = this.imgs.length-1;
+				}
+			},
+			x2:function(){
+				this.index++;
+				if(this.index > this.imgs.length-1){
+					this.index = 0;
+				}
+			}
+		}
+	});
+	
+</script>
+</body>
+</html>

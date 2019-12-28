@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>class属性绑定</title>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+<div id="main">
+	<button @click="x1">左</button>
+	<button @click="x2">中</button>
+	<button @click="x3">右</button>
+<div v-bind:class='{"test-left":flag1,"text-center":flag2,"text-right":flag3}'>
+		示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  <br>
+		示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  <br>
+		示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  <br>
+		示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  <br>
+		示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  示例文本内容  <br>
+	</div>
+</div>
+<script type="text/javascript">
+	var v = new Vue({
+		el:"#main",
+		data:{
+			flag1:false,
+			flag2:false,
+			flag3:false
+		},
+		methods:{
+			x1:function(){
+				this.flag1=true;
+				this.flag2=false;
+				this.flag3=false;
+			},
+			x2:function(){
+				this.flag1=false;
+				this.flag2=true;
+				this.flag3=false;
+			},
+			x3:function(){
+				this.flag1=false;
+				this.flag2=false;
+				this.flag3=true;
+			}
+		}
+		
+	});
+</script>
+</body>
+</html>
